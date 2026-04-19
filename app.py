@@ -288,7 +288,7 @@ def order_page():
         with open("apsrtc_main_graph.pkl","rb") as f:
             g = pickle.load(f)
     except:
-        st.error("❌ graph file missing")
+        st.error(f"❌ Graph load error: {e}")
         st.stop()
 
     places_df = places_df[places_df["placeId"].isin(g.nodes)]
