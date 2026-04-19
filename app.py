@@ -174,6 +174,19 @@ def load_global_css():
     form button[kind="formSubmit"]:active {
         transform: scale(0.97);
     }
+    /* SUBMIT BUTTON */
+    form button[kind="formSubmit"] {
+        background-color: #0B3D91 !important;
+        color: white !important;
+        border-radius: 10px !important;
+        padding: 10px !important;
+    }
+    
+    /* HOVER */
+    form button[kind="formSubmit"]:hover {
+        background-color: #4169E1 !important;
+    }
+
     /* -------- TEXT INPUT FIELD -------- */
     input[type="text"], input[type="password"] {
         border: 2px solid #0B3D91;
