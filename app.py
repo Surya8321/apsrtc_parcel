@@ -284,10 +284,15 @@ def order_page():
         st.error("❌ data.csv not found")
         st.stop()
 
+
     try:
-        with open("apsrtc_main_graph.pkl","rb") as f:
+        BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+        file_path = os.path.join(BASE_DIR, "apsrtc_main_graph.pkl")
+    
+        with open(file_path, "rb") as f:
             g = pickle.load(f)
-    except:
+    
+    except Exception as e:
         st.error(f"❌ Graph load error: {e}")
         st.stop()
 
