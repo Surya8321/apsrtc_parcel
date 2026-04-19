@@ -19,6 +19,8 @@ import barcode
 from barcode.writer import ImageWriter
 
 from dotenv import load_dotenv 
+import os
+st.write("FILES:", os.listdir())
 load_dotenv()
 # -------------------------------
 # CONFIG
