@@ -20,7 +20,7 @@ from barcode.writer import ImageWriter
 
 from dotenv import load_dotenv 
 import os
-st.write("FILES:", os.listdir())
+
 load_dotenv()
 # -------------------------------
 # CONFIG
@@ -148,7 +148,54 @@ def load_global_css():
     h1, h2, h3, h4 {
         color: #0B3D91;
     }
+
+    /* -------- ALL STREAMLIT BUTTONS -------- */
+    .stButton > button,
+    form button[kind="formSubmit"] {
+        background-color: #0B3D91;
+        color: #FFFFFF;
+        border-radius: 10px;
+        border: none;
+        font-weight: 600;
+        padding: 10px;
+        transition: all 0.3s ease;
+    }
     
+    /* Hover */
+    .stButton > button:hover,
+    form button[kind="formSubmit"]:hover {
+        background-color: #4169E1;
+        color: #FFFFFF;
+        transform: scale(1.03);
+    }
+    
+    /* Click */
+    .stButton > button:active,
+    form button[kind="formSubmit"]:active {
+        transform: scale(0.97);
+    }
+    /* -------- TEXT INPUT FIELD -------- */
+    input[type="text"], input[type="password"] {
+        border: 2px solid #0B3D91;
+        border-radius: 8px;
+        padding: 10px;
+        background-color: #F5F8FF;
+        color: #000000;
+        font-size: 16px;
+    }
+    
+    /* Focus effect */
+    input[type="text"]:focus, input[type="password"]:focus {
+        border-color: #4169E1;
+        outline: none;
+        box-shadow: 0 0 5px rgba(65, 105, 225, 0.5);
+    }
+    
+    /* Label styling */
+    label {
+        font-weight: 600;
+        color: #0B3D91;
+    }
 
     </style>
     """, unsafe_allow_html=True)
